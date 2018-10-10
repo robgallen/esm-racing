@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@4.1.3",
+      "destination": "wwwroot/lib/bootstrap",
+      "files": [
+        "css/bootstrap-grid.min.css",
+        "css/bootstrap-reboot.min.css",
+        //"css/bootstrap.min.css", // using bootswatch version of Solar
+        "js/bootstrap.bundle.min.js",
+        "js/bootstrap.min.js"
+      ]
+    },
+    {
+      "library": "jquery@3.3.1",
+      "destination": "wwwroot/lib/jquery",
+      "files": [
+        "core.js",
+        "jquery.min.js",
+        "jquery.slim.min.js"
+      ]
+    },
+    {
+      "library": "jquery-validate@1.17.0",
+      "destination": "wwwroot/lib/jquery-validation",
+      "files": [
+        "jquery.validate.min.js",
+        "additional-methods.min.js"
+      ]
+    },
+    {
+      "library": "jquery-validation-unobtrusive@3.2.11",
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive",
+      "files": [ "jquery.validate.unobtrusive.min.js" ]
+    },
+    {
+      "library": "popper.js@1.14.3",
+      "destination": "wwwroot/lib/popper.js",
+      "files": [
+        "popper.min.js",
+        "popper-utils.min.js"
+      ]
+    }
+  ]
+}
