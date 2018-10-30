@@ -35,3 +35,7 @@ body {
         display: none;
     }
 }
+
+.navbar-brand {
+    font-family: Nunito, sans-serif;
+}
