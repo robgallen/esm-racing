@@ -8,7 +8,6 @@
       "files": [
         "css/bootstrap-grid.min.css",
         "css/bootstrap-reboot.min.css",
-        //"css/bootstrap.min.css", // using bootswatch version of Solar
         "js/bootstrap.bundle.min.js",
         "js/bootstrap.min.js"
       ]
