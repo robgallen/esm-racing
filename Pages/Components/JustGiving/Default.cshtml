@@ -1,0 +1,12 @@
+﻿@using System.Globalization;
+@model JustGivingSDK.Contracts.Campaign.GetCampaignDetailsResponse
+@{
+    CultureInfo ci = (Model.Currency == "GBP") ? CultureInfo.GetCultureInfo("en-GB") : CultureInfo.CurrentUICulture;
+    Decimal.TryParse(Model.TotalRaised, out decimal total);
+    string totalRaised = total.ToString("C", ci);
+
+    <div>
+        <img src="@Model.CharityLogoUrl" width="75" height="75" />
+        Total raised for @Model.CampaignPageName: @totalRaised
+    </div>
+}

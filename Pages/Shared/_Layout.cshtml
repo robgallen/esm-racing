@@ -47,6 +47,7 @@
         @RenderBody()
         <hr />
         <footer>
+            @await Component.InvokeAsync("JustGiving")
             <p>&copy; @DateTime.Now.Year - esm</p>
         </footer>
     </div>
