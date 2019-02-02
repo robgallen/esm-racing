@@ -45,12 +45,16 @@
 
   <div class="container body-content">
     @RenderBody()
-    <hr />
-    <footer>
-      @await Component.InvokeAsync("JustGiving")
-      <p>&copy; @DateTime.Now.Year - esm</p>
-    </footer>
   </div>
+
+  <footer class="footer">
+    <div class="container">
+      <hr />
+      @await Component.InvokeAsync("JustGiving")
+      <br />
+      <p>&copy; @DateTime.Now.Year - esm</p>
+    </div>
+  </footer>
 
   <environment include="Development">
     <script src="~/lib/jquery/jquery.slim.min.js"></script>
