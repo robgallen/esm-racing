@@ -1,12 +1,15 @@
-﻿@using System.Globalization;
-@model JustGivingSDK.Contracts.Campaign.GetCampaignDetailsResponse
+@using System.Globalization;
+@model JustGivingSDK.Contracts.Fundraising.GetFundraisingPageResponse
 @{
-    CultureInfo ci = (Model.Currency == "GBP") ? CultureInfo.GetCultureInfo("en-GB") : CultureInfo.CurrentUICulture;
-    Decimal.TryParse(Model.TotalRaised, out decimal total);
-    string totalRaised = total.ToString("C", ci);
+  CultureInfo ci = (Model.CurrencyCode == "GBP") ? CultureInfo.GetCultureInfo("en-GB") : CultureInfo.CurrentUICulture;
+  Decimal.TryParse(Model.TotalRaisedOnline, out decimal total);
+  string totalRaised = total.ToString("C", ci);
 
-    <div>
-        <img src="@Model.CharityLogoUrl" width="75" height="75" />
-        Total raised for @Model.CampaignPageName: @totalRaised
+  <div class="media">
+    <img class="mr-3" src="@Model.Charity.LogoAbsoluteUrl" width="75" height="75" />
+    <div class="media-body">
+      <h6 class="mt-0">Total raised for @Model.Charity.Name: @totalRaised</h6>
+      <a href="https://www.justgiving.com/fundraising/@Model.PageShortName">You can donate now</a>
     </div>
+  </div>
 }
